@@ -1,7 +1,10 @@
 from kafka import KafkaProducer
-producer = KafkaProducer(bootstrap_servers=['130.61.225.214:9092'])
+from time import sleep
+producer = KafkaProducer(bootstrap_servers=['localhost:9092'])
+from random import randint
 
-for e in range(1000):
-    data = {'number' : e}
-    producer.send('numtest', value=data)
+for _ in range(1000):
+    random_integer = randint(1, 2500)
+    data = str(random_integer).encode()
+    producer.send('surprise_me', value=data)
     sleep(5)

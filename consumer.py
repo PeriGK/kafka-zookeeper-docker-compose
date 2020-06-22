@@ -1,11 +1,10 @@
 from kafka import KafkaConsumer
 
 consumer = KafkaConsumer(
-    'numtest',
-     bootstrap_servers=['localhost:9092'],
-     auto_offset_reset='earliest',
-     enable_auto_commit=True,
-     group_id='my-group')
+    'surprise_me',
+     bootstrap_servers=['localhost:9092'])
 
 for message in consumer:
-    print('{} added to {}'.format(message, collection))
+    num = int(message.value.decode())
+    if num % 2 == 1:
+        print(f'Odd number {num} added to numtest. The whole message is {message}')
