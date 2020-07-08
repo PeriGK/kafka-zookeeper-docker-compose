@@ -1,34 +1,3 @@
-![image](images/confluent-logo-300-2.png)
-  
-* [Build Your Own](#build-your-own)
-* [In Action](#in-action)
-* [Additional Resources](#additional-resources)
-
-# Build Your Own
-
-We have several resources that launch Apache Kafka® and Confluent Platform with no pre-configured connectors, data sources, topics, schemas, etc.
-These examples are useful if you want to build your own custom demo or test environment.
-Using these as a foundation, you can add any connectors or applications.
-
-* [cp-all-in-one](cp-all-in-one/README.md): This Docker Compose file launches all services in Confluent Platform, and runs them in containers in your local host.
-
-<p align="center">
-<a href="cp-all-in-one"><img src="images/cp-all-in-one.png" width="400"></a>
-</p>
-
-* [cp-all-in-one-community](cp-all-in-one-community/README.md): This Docker Compose file launches only the community services in Confluent Platform, and runs them in containers in your local host.
-
-<p align="center">
-<a href="cp-all-in-one-community"><img src="images/cp-all-in-one-community.png" width="400"></a>
-</p>
-
-* [cp-all-in-one-cloud](cp-all-in-one-cloud/README.md): Use this with your existing Confluent Cloud instance. This Docker Compose file launches all services in Confluent Platform (except for the Kafka brokers), runs them in containers in your local host, and automatically configures them to connect to Confluent Cloud.
-
-<p align="center">
-<a href="cp-all-in-one-cloud"><img src="images/cp-all-in-one-cloud.png" width="600"></a>
-</p>
-
-
 # In Action
 
 To see these `cp-all-in-one` examples in action, see the automated demos in https://github.com/confluentinc/examples/tree/latest/cp-quickstart . There is one automated demo for each of the above Docker Compose files.
